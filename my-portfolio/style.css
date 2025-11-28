@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#hero{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+#video-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: +1; */
+    opacity: 40%;
+}
+
+audio{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    z-index: 10;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.33);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+ul{
+	list-style:none;
+    
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a{
+    background-color: #090757;
+    border-radius: 5px;
+    padding: 3px;
+	text-decoration: none;
+    color: white;
+}
+
+#menu-button{
+    display: none;
+}
+
+
+.hero-content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards;
+}
+
+.hero-content p{
+    font-weight: bold;
+    background-color: #090757;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(206, 93, 17, 0.25);
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+#about .desc {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+
+
+#skills{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:rgba(95, 143, 7, 0.288);
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.inner-skill{
+    display: flex;
+    gap: 40px;
+}
+
+.inner-skill-last .skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.33);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 920px;
+    height: 150px;
+    border-radius: 6px;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.33);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 200px;
+    height: 150px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.skill:active{
+    box-shadow: none;
+    border: none;
+}
+
+.skill:click{
+color: red;
+}
+
+#projects{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:rgba(7, 127, 143, 0.253);
+}
+
+.projects-container{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project-details{
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.33);
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 70px;
+    background-repeat: no-repeat;
+}
+
+.project:hover{
+    transform: translateX(1%) translateY(-1%);
+    box-shadow: none;
+    border: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+.project:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.project:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80");
+}
+
+.project:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80");
+}
+
+.project:nth-child(4) {
+    background-image: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=800&q=80");
+}
+
+
+#contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(89, 7, 143, 0.25);
+    font-size: 22px;
+}
+
+#contact h1 {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.contact-info {
+    padding: 30px;
+    min-width: 350px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact-info p strong {
+    color: #090757;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.33);
+    backdrop-filter: blur(6px);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #090757;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #090757;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #05043a;
+}
+
+
+
+.rights {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+/* .navbar {
+display: flex;
+flex-direction: column; 
+align-items: center;
+padding: 1rem;
+position: relative;
+z-index: 10;
+}
+.nav-links {
+list-style: none;
+display: none;
+flex-direction: column;
+width: 100%;
+text-align: center;
+}
+.nav-links.open {
+display: flex;
+} */
+
+
+@media screen and (max-width: 1024px) {
+#skills {
+    min-height: 100vh;
+    height: auto;
+}
+
+#skills h1{
+    margin-top: 10px;
+}
+
+.skills-container{
+    margin-bottom: 20px;
+}
+
+.inner-skill{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.inner-skill-last .skill{
+    max-width: 440px;
+    height: 150px;
+}
+
+#projects {
+    min-height: 100vh;
+    height: auto;
+}
+
+#contact {
+    min-height: 100vh;
+    height: auto;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}

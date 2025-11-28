@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header id="hero">
+    <video autoplay loop muted id="video-background">
+        <!-- Use a small, low-res video file for demonstration/performance -->
+        <source src="anime_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <audio controls autoplay loop id="bg-audio">
+    <source src="ben10music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <div>
+        
+    </div>
+    <nav class="navbar">
+        <span class="logo">My Portfolio</span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+         ☰
+        </button>
+    </nav>
+    <div class="hero-content">
+        <h1>Sujal Adhikari</h1>
+        <p>Frontend Developer & UI/UX Enthusiast</p>
+    </div>
+</header>
+
+<section id="about">
+    <h1>About Me</h1>
+    <p class="desc">
+        I am Sujal Adhikari, a passionate Frontend Developer with a keen eye for UI/UX design. I love building interactive web applications 
+        that are not only functional but also visually appealing. When I’m not coding, I enjoy exploring design trends and improving my skills.
+    </p>
+    <p class="desc">
+        My expertise includes HTML5, CSS3, JavaScript, and React.js. I believe in writing clean, maintainable code while delivering beautiful interfaces. 
+        Collaboration and continuous learning are my keys to success.
+    </p>
+</section>
+
+<section id="skills">
+    <h1>My Skills</h1>
+    <div class="skills-container">
+        <div class="inner-skill">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript (ES6+)</div>
+            <div class="skill">React.js</div>
+        </div>
+        <div class="inner-skill">
+            <div class="skill">Responsive Design</div>
+            <div class="skill">UI/UX Design</div>
+            <div class="skill">Figma</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+        <div class="inner-skill-last">
+            <div class="skill">API Integration</div>
+        </div>
+    </div>
+</section>
+<section class="projects" id="projects">
+    <h1>My Projects</h1>
+    <div class="projects-container">
+        <div class="project">
+            <div class="project-details">
+                <h2>Weather App</h2>
+                <p>A simple weather application built using HTML, CSS, and JavaScript. It fetches real-time weather data using an external API.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-details">
+                <h2>To-Do List App</h2>
+                <p>A clean and interactive task manager that allows users to add, edit, and delete tasks. Stores data with localStorage.</p>
+            </div> 
+        </div>
+
+        <div class="project">
+            <div class="project-details">
+                <h2>Recipe Finder</h2>
+                <p>A search-based recipe explorer that provides cooking instructions and ingredients using a public REST API.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-details">
+                <h2>Movie Explorer</h2>
+                <p>A movie search tool that displays film posters, descriptions, and ratings from an open movie database API.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h1>My Contact</h1>
+    <div class="contact-info">
+        <p><strong>Phone:</strong>9767279707</p>
+        <p><strong>Email:</strong>sujaladhikari387@gmail.com</p>
+        <p><strong>Location:</strong> Lalitpur, Nepal</p>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+        <input type="text" placeholder="Your Name" id="form-name-id">
+        <input type="email" placeholder="Your Email" id="email-form-id">
+        <button type="submit">Send Mailing information</button>
+    </form>
+    <div id="form-message"></div>
+    
+</section>
+<footer>
+    <div class="rights">
+        © 2025 Sujal Adhikari. All rights reserved.
+    </div>
+</footer>
+
+
+<script src="index.js"></script>
+</body>
+</html>
